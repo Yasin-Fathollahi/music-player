@@ -1,0 +1,316 @@
+/* 
+-- 01 Typography system
+- Font-sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 /
+44 / 52 / 62 / 74 / 86 / 98
+
+- Font-weights
+
+- Line-heights
+
+- letter-spacing
+
+-- 02 Colors
+- Primary: #020c24
+- Tints: #13203D
+- Shades: 
+- Accents: 
+- Greys: #1D1F26
+
+-- 05 Shadows
+
+-- 06 Border-radius
+
+- 
+-- 07 Whitespace
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 /
+80 / 96 / 128
+
+*/
+
+/*  TYPOGRAPHY RULES:
+      heading: +50px +600bold && line-height: below 1.5 && less letter-spacing
+      normal text: 16px - 23px && line-height: 1.5 to 2
+      long text: +20px
+
+      NO FONT WEIGHT BELOW 400 
+      ALWAYS LESS THAN 75 CHARACTERS
+      Short title case: uppercase, bold, small, increased letter spacing
+      don't jusfify text
+      don't center long text but it's fine for short text.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/*////////////////////*/
+/* General Styles */
+/*////////////////////*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #020c24;
+  --color-shade: #13203d;
+  --color-grey: #151e31;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: var(--color-shade);
+}
+
+button {
+  background: none;
+  border: none;
+  transition: all 0.2s;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/*////////////////////*/
+/* Header */
+/*////////////////////*/
+main {
+  width: 400px;
+  min-height: 75vh;
+  background-color: var(--color-primary);
+  padding: 3.2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 3rem 0 rgba(255, 255, 255, 0.5);
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4.8rem;
+}
+
+.page-icon {
+  stroke: #fff;
+  height: 2.4rem;
+  width: 2.4rem;
+  fill: #fff;
+}
+
+.song-info-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6.4rem;
+}
+
+.song-details-box {
+  max-width: 25rem;
+}
+
+.song-name {
+  font-size: 3rem;
+  margin-bottom: 1.6rem;
+  font-weight: 500;
+}
+
+.song-artist {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #eee;
+}
+
+.song-cover-box {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 8rem;
+}
+
+.song-cover-box::before,
+.song-cover-box::after {
+  content: '';
+  display: block;
+  background-color: var(--color-grey);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.song-cover-box::before {
+  width: 85%;
+  padding-bottom: 85%;
+  border: 3px solid #20283b;
+  z-index: 2;
+}
+
+.song-cover-box::after {
+  width: 95%;
+  padding-bottom: 95%;
+}
+
+.song-cover-img {
+  border-radius: 50%;
+  width: 25rem;
+  height: 25rem;
+  z-index: 5;
+}
+
+/*////////////////////*/
+/* Music progress bar styles */
+/*////////////////////*/
+.music-timings {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.progress-container {
+  height: 0.8rem;
+  background-color: var(--color-shade);
+  border-radius: 10px;
+  margin: 0 auto 4rem auto;
+}
+
+.progress-container:hover {
+  cursor: pointer;
+}
+.progress {
+  width: 0;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: width 0.01s linear;
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.3);
+}
+
+/*////////////////////*/
+/* Action buttons */
+/*////////////////////*/
+.btns-action {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-play-circle .page-icon {
+  fill: var(--color-primary);
+  z-index: 2;
+}
+
+.btn-play-circle {
+  background-color: #ebe6e6;
+  width: 5.6rem;
+  height: 5.6rem;
+
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn--light:hover {
+  filter: brightness(80%);
+}
+
+.btn-shuffle,
+.btn-repeat {
+  filter: brightness(50%);
+}
+
+.btn-shuffle:hover,
+.btn-repeat:hover {
+  filter: none;
+}
+
+.btn--active {
+  filter: none;
+}
+
+.btn--active.btn-shuffle:hover,
+.btn--active.btn-repeat:hover {
+  filter: brightness(80%);
+}
+
+.lyrics-box {
+  visibility: hidden;
+  width: 100%;
+  height: 0;
+  background-color: #020c24f0;
+  /* default #1b243a */
+  position: absolute;
+  z-index: 50;
+  left: 0;
+  top: 0;
+  border-radius: 15px;
+  transition: all 1s;
+  padding: 3.2rem;
+}
+.lyrics {
+  display: none;
+  font-size: 2rem;
+  color: #b3b6bd;
+}
+
+.overlay--active {
+  visibility: visible;
+  height: 100%;
+  line-height: 1.7;
+  overflow-y: scroll;
+}
+
+.overlay--active .lyrics {
+  display: block;
+}
+
+/*////////////////////*/
+/* Lyrics loader */
+/*////////////////////*/
+.loader {
+  height: 80px;
+  aspect-ratio: 1;
+  box-sizing: border-box;
+  position: relative;
+  mask: radial-gradient(#0000 47%, #fff 48% 71%, #0000 72%) exclude,
+    conic-gradient(#fff 0 0) no-clip;
+  animation: l11 1s linear infinite;
+}
+.loader:before {
+  content: '';
+  position: absolute;
+  inset: 0 35% 70%;
+  border-radius: 50%;
+  background: #fff;
+  filter: blur(15px);
+}
+@keyframes l11 {
+  to {
+    rotate: 1turn;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.center-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
