@@ -109,9 +109,6 @@ a:active {
   height: 100vh;
 }
 
-main {
-}
-
 header {
   display: flex;
   justify-content: space-between;

@@ -4,6 +4,12 @@ import {
   PROXY,
   getJSON,
 } from './config.js';
+
+import LANA_00 from '../music/00 Lana Del Rey.mp3';
+import LANA_01 from '../music/01 Lana Del Rey.mp3';
+import LANA_02 from '../music/02 Lana Del Rey.mp3';
+import LANA_03 from '../music/03 Lana Del Rey.mp3';
+
 export const state = {
   currentSong: {
     lyrics: '',
@@ -12,23 +18,23 @@ export const state = {
   },
   playList: [
     {
-      path: './src/music/00 Lana Del Rey.mp3',
+      path: LANA_00,
       title: 'Honeymoon',
       artist: 'Lana Del Rey',
     },
     {
-      path: './src/music/02 Lana Del Rey.mp3',
+      path: LANA_01,
       title: 'Video Games',
       artist: 'Lana Del Rey',
     },
     {
-      path: './src/music/01 Lana Del Rey.mp3',
+      path: LANA_02,
       title: 'Music To Watch Boys To',
       artist: 'Lana Del Rey',
     },
 
     {
-      path: './src/music/03 Lana Del Rey.mp3',
+      path: LANA_03,
       title: 'Cinnamon Girl',
       artist: 'Lana Del Rey',
     },
