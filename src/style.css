@@ -65,7 +65,6 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,6 +106,10 @@ a:active {
   box-shadow: 0 0 3rem 0 rgba(255, 255, 255, 0.5);
   position: relative;
   /* max-height: 100vh; */
+  height: 100vh;
+}
+
+main {
 }
 
 header {
@@ -353,8 +356,17 @@ footer {
   .app-container {
     max-width: none;
     border-radius: 0;
+    box-shadow: none;
+    border-radius: none;
+    height: 100vh;
     display: flex;
     flex-direction: column;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0;
   }
 
   header {
@@ -385,7 +397,8 @@ footer {
   }
 
   .section-bottom {
-    margin-top: auto;
+    /* margin-top: auto; */
+    justify-content: flex-end;
   }
 }
 

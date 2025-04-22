@@ -48,10 +48,10 @@ const updateTimings = function (DOMElements, value) {
 };
 
 const play = function () {
-  audioPlayer.play();
+  audioPlayer.autoplay = true;
   // setting the current song index
   updateTimings([currentTimeMin, currentTimeSec], audioPlayer.currentTime);
-  audioPlayer.autoplay = true;
+  audioPlayer.play();
 };
 
 const playPause = function () {
