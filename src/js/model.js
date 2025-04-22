@@ -5,10 +5,10 @@ import {
   getJSON,
 } from './config.js';
 
-import LANA_00 from '../music/00 Lana Del Rey.mp3';
-import LANA_01 from '../music/01 Lana Del Rey.mp3';
-import LANA_02 from '../music/02 Lana Del Rey.mp3';
-import LANA_03 from '../music/03 Lana Del Rey.mp3';
+import LANA_00 from '../../public/00 Lana Del Rey.mp3';
+import LANA_01 from '../../public/01 Lana Del Rey.mp3';
+import LANA_02 from '../../public/02 Lana Del Rey.mp3';
+import LANA_03 from '../../public/03 Lana Del Rey.mp3';
 
 export const state = {
   currentSong: {
