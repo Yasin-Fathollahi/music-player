@@ -12,23 +12,23 @@ export const state = {
   },
   playList: [
     {
-      path: '../music/00 Lana Del Rey.mp3',
+      path: './src/music/00 Lana Del Rey.mp3',
       title: 'Honeymoon',
       artist: 'Lana Del Rey',
     },
     {
-      path: '../music/02 Lana Del Rey.mp3',
+      path: './src/music/02 Lana Del Rey.mp3',
       title: 'Video Games',
       artist: 'Lana Del Rey',
     },
     {
-      path: '../music/01 Lana Del Rey.mp3',
+      path: './src/music/01 Lana Del Rey.mp3',
       title: 'Music To Watch Boys To',
       artist: 'Lana Del Rey',
     },
 
     {
-      path: '../music/03 Lana Del Rey.mp3',
+      path: './src/music/03 Lana Del Rey.mp3',
       title: 'Cinnamon Girl',
       artist: 'Lana Del Rey',
     },

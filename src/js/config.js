@@ -8,7 +8,7 @@ export const PROXY = 'https://corsproxy.io/?url=';
 
 export const getJSON = async function (url) {
   try {
-    const res = await fetch(url);
+    const res = await fetch(`${url}`);
     if (res.status === 404) throw new Error();
     return await res.json();
   } catch (err) {
