@@ -51,6 +51,7 @@ const play = function () {
   audioPlayer.play();
   // setting the current song index
   updateTimings([currentTimeMin, currentTimeSec], audioPlayer.currentTime);
+  audioPlayer.autoplay = true;
 };
 
 const playPause = function () {
